@@ -10,11 +10,6 @@ const defaultCatData = {
   bedsOwned: 0,
 };
 
-const defaultDogData = {
-  name: 'unknown',
-  breed: 'unknown',
-  age: 0
-}
 // object for us to keep track of the last Cat we made and dynamically update it sometimes
 let lastAdded = new Cat(defaultCatData);
 // function to handle requests to the main page
@@ -28,7 +23,7 @@ const hostIndex = (req, res) => {
   // actually calls index.jade. A second parameter of JSON can be passed
   // into the jade to be used as variables with #{varName}
   res.render('index', {
-    currentName: lastDogAdded.name,
+    currentName: lastAdded.name,
     title: 'Home',
     pageName: 'Home Page',
   });
