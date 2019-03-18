@@ -16,8 +16,7 @@ const defaultDogData = {
   age: 0
 }
 // object for us to keep track of the last Cat we made and dynamically update it sometimes
-let lastCatAdded = new Cat(defaultCatData);
-let lastDogAdded = new Dog(defaultDogData);
+let lastAdded = new Cat(defaultCatData);
 // function to handle requests to the main page
 // controller functions in Express receive the full HTTP request
 // and a pre-filled out response object to send
